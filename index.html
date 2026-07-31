@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hipnose Clínica e Coaching em Curitiba e online.">
+  <title>Hipnose Clínica &amp; Coaching | Curitiba e Online</title>
+  <style>
+    :root { --blue:#64b9e8; --dark:#164b71; --ink:#1d3545; --pale:#eef9ff; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:#fff; font-family:Arial, Helvetica, sans-serif; line-height:1.6; }
+    .container { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.95); border-bottom:1px solid #d9edf8; backdrop-filter:blur(10px); }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { font-weight:800; color:var(--dark); font-size:1.05rem; text-decoration:none; line-height:1.2; }
+    .brand span { display:block; color:#5c94b2; font-size:.72rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+    nav a { margin-left:20px; font-size:.92rem; color:var(--ink); text-decoration:none; font-weight:700; }
+    nav a:hover { color:var(--blue); }
+    nav .instagram { display:inline-flex; vertical-align:middle; align-items:center; justify-content:center; width:32px; height:32px; margin-left:16px; color:#fff; background:linear-gradient(135deg,#833ab4,#e1306c,#f77737); border-radius:9px; }
+    nav .instagram:hover { color:#fff; transform:translateY(-1px); }
+    nav .instagram svg { width:17px; height:17px; }
+    nav .facebook { display:inline-flex; vertical-align:middle; align-items:center; justify-content:center; width:32px; height:32px; margin-left:8px; color:#fff; background:#1877f2; border-radius:9px; }
+    nav .facebook:hover { color:#fff; transform:translateY(-1px); }
+    nav .facebook svg { width:17px; height:17px; }
+    .hero { overflow:hidden; position:relative; padding:92px 0 82px; color:#edfaff; background:linear-gradient(90deg,rgba(7,50,87,.82) 0%,rgba(9,75,120,.66) 52%,rgba(22,122,174,.38) 100%),url('cristiano-mendes.jpeg') center 27%/cover; }
+    .hero:after { content:""; position:absolute; width:420px; height:420px; right:-160px; top:-135px; border:70px solid rgba(174,229,255,.20); border-radius:50%; }
+    .hero-grid { position:relative; z-index:1; display:grid; grid-template-columns:1.25fr .75fr; gap:64px; align-items:center; }
+    .eyebrow { color:#397b9f; font-weight:800; text-transform:uppercase; letter-spacing:.12em; font-size:.76rem; }
+    .hero .eyebrow { color:#ffe28a; text-shadow:0 1px 10px rgba(0,0,0,.25); }
+    h1,h2,h3 { margin:0; line-height:1.16; color:var(--dark); }
+    h1 { margin-top:14px; max-width:680px; font-size:clamp(2.35rem,5vw,4.25rem); letter-spacing:-.05em; }
+    .hero h1 { color:#fff; } .hero h1 em { color:#9de1ff; font-style:normal; }
+    .hero p { max-width:600px; font-size:1.12rem; margin:24px 0 30px; }
+    .actions { display:flex; gap:14px; flex-wrap:wrap; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:9px; border-radius:999px; padding:14px 22px; font-weight:800; text-decoration:none; transition:.2s transform,.2s box-shadow; }
+    .button:hover { transform:translateY(-2px); box-shadow:0 9px 22px rgba(26,101,143,.2); }
+    .primary { background:#168b58; color:#fff; }
+    .secondary { border:1px solid #b3e6fb; color:#fff; background:rgba(255,255,255,.11); }
+    .hero-card { color:var(--ink); background:rgba(255,255,255,.94); border:1px solid #c9e9f8; border-radius:24px; padding:32px; box-shadow:0 20px 45px rgba(0,30,58,.30); }
+    .hero-card .icon { width:52px; height:52px; display:grid; place-items:center; border-radius:16px; background:#dff4ff; font-size:1.55rem; }
+    .hero-card h2 { font-size:1.4rem; margin:16px 0 10px; }
+    .check { list-style:none; padding:0; margin:17px 0 0; }
+    .check li { margin:9px 0; font-size:.95rem; }
+    .check li:before { content:"✓"; color:#168b58; font-weight:bold; margin-right:10px; }
+    section { padding:82px 0; }
+    .section-top { max-width:680px; margin-bottom:38px; }
+    .section-top h2 { margin-top:9px; font-size:clamp(1.8rem,3.5vw,2.7rem); letter-spacing:-.035em; }
+    .section-top p { margin:14px 0 0; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .card { padding:28px; border:1px solid #dceef7; border-radius:18px; background:#fff; }
+    .card:hover { border-color:#9ed4ed; box-shadow:0 13px 30px rgba(47,119,155,.09); }
+    .card .number { color:var(--blue); font-size:.85rem; font-weight:800; }
+    .card h3 { margin:12px 0 10px; font-size:1.22rem; }
+    .card p { margin:0; font-size:.96rem; }
+    .profile { background:#fff; }
+    .profile-grid { display:grid; grid-template-columns:.72fr 1.28fr; gap:64px; align-items:center; }
+    .profile-photo { width:100%; max-width:390px; margin:auto; display:block; aspect-ratio:1/1; object-fit:cover; object-position:center top; border-radius:28px; box-shadow:20px 20px 0 #cfeefa; }
+    .profile h2 { margin:9px 0 16px; font-size:clamp(1.9rem,3.5vw,2.8rem); letter-spacing:-.04em; }
+    .profile .role { display:block; color:#3980a7; font-weight:800; margin:-8px 0 20px; }
+    .profile p { max-width:620px; }
+    .how { background:var(--pale); }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
+    .step { display:flex; gap:16px; }
+    .step b { flex:0 0 38px; height:38px; display:grid; place-items:center; background:var(--blue); color:white; border-radius:50%; }
+    .step h3 { font-size:1.06rem; margin:5px 0 6px; }
+    .step p { margin:0; font-size:.94rem; }
+    .location { padding:70px 0; background:var(--dark); color:#e9f7ff; }
+    .location-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center; }
+    .location h2 { color:#fff; font-size:clamp(1.8rem,3vw,2.5rem); }
+    .location p { margin:12px 0 0; }
+    .place { padding:25px; border-radius:18px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); }
+    .place strong { display:block; color:#aee5ff; margin-bottom:6px; }
+    .map { min-height:330px; overflow:hidden; border-radius:18px; border:1px solid rgba(255,255,255,.25); box-shadow:0 14px 30px rgba(0,0,0,.2); }
+    .map iframe { display:block; width:100%; height:330px; border:0; filter:saturate(.86) contrast(1.04); }
+    .map-link { display:inline-flex; margin-top:20px; color:#fff; font-weight:800; text-decoration:none; border-bottom:1px solid #aee5ff; }
+    footer { padding:27px 0; text-align:center; color:#668294; font-size:.88rem; }
+    .whatsapp { position:fixed; right:22px; bottom:22px; z-index:20; display:flex; align-items:center; gap:10px; padding:13px 17px; color:#fff; background:#168b58; border-radius:999px; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(15,91,57,.3); }
+    @media (max-width:760px) { nav { display:none; } .nav { min-height:62px; } .hero { padding:62px 0; } .hero-grid,.location-grid,.profile-grid { grid-template-columns:1fr; gap:32px; } .cards,.steps { grid-template-columns:1fr; } section { padding:62px 0; } .hero-card { padding:25px; } .profile-photo { max-width:310px; } .whatsapp { right:14px; bottom:14px; } }
+  </style>
+</head>
+<body>
+  <header><div class="container nav"><a class="brand" href="#inicio">CRISTIANO MENDES<span>Terapeuta, Parapsicólogo e Palestrante</span></a><nav><a href="#servicos">Serviços</a><a href="#cristiano">Sobre mim</a><a href="#como-funciona">Como funciona</a><a href="#atendimento">Atendimento</a><a class="instagram" href="https://www.instagram.com/cristianomendes.terapeuta/" target="_blank" rel="noopener" aria-label="Instagram de Cristiano Mendes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a class="facebook" href="https://www.facebook.com/HipnoterapeutaCristianoMendes" target="_blank" rel="noopener" aria-label="Facebook de Cristiano Mendes"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2H7.5v3h2.8v8h3.2Z"/></svg></a></nav></div></header>
+  <main>
+    <section class="hero" id="inicio"><div class="container hero-grid"><div><div class="eyebrow">Atendimento Presencial e Online</div><h1>Um espaço para olhar para si com <em>mais clareza.</em></h1><p>Atendimento para quem busca desenvolver recursos internos, superar padrões, ressignificar e construir uma vida mais leve e consciente.</p><div class="actions"><a class="button primary" href="https://wa.me/5541988471452?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener">◉ Agendar pelo WhatsApp</a><a class="button secondary" href="#servicos">Conhecer serviços</a></div></div><aside class="hero-card"><div class="icon">✦</div><h2>Atendimento com escuta e presença</h2><p>Cada processo é conduzido respeitando seu momento, objetivos e individualidade.</p><ul class="check"><li>Atendimento presencial no bairro Bacacheri — Curitiba — PR</li><li>Sessões por videochamada para o Brasil e o exterior</li><li>Horários mediante agendamento</li></ul></aside></div></section>
+    <section id="servicos"><div class="container"><div class="section-top"><div class="eyebrow">Caminhos de cuidado</div><h2>Conheça as possibilidades de atendimento</h2><p>Abordagens voltadas ao autoconhecimento, à ressignificação de padrões e ao desenvolvimento de recursos internos.</p></div><div class="cards"><article class="card"><div class="number">01 / PNL</div><h3>PNL — Reprogramação Mental</h3><p>A Programação Neurolinguística explora a relação entre pensamentos, linguagem e comportamentos. Pode contribuir para reconhecer padrões, ampliar recursos pessoais e apoiar mudanças alinhadas aos seus objetivos.</p></article><article class="card"><div class="number">02 / CONSTELAÇÃO FAMILIAR</div><h3>Constelação Familiar</h3><p>Uma abordagem de visão sistêmica que convida à reflexão sobre vínculos e dinâmicas familiares. Seu objetivo é favorecer novas compreensões sobre situações vividas e possibilidades de reposicionamento.</p></article><article class="card"><div class="number">03 / HIPNOSE CLÍNICA</div><h3>Hipnose Clínica</h3><p>Um recurso de atenção focada e relaxamento conduzido, utilizado para trabalhar padrões, emoções e objetivos pessoais. Pode favorecer autoconhecimento, ressignificação e maior acesso a recursos internos.</p></article><article class="card"><div class="number">04 / PSICOTERAPIA BREVE</div><h3>Psicoterapia Breve</h3><p>Um acompanhamento focado em uma demanda atual e objetivos definidos. Busca organizar a compreensão do momento, mobilizar recursos e apoiar decisões e estratégias práticas para o cotidiano.</p></article><article class="card"><div class="number">05 / PSICANÁLISE CLÍNICA</div><h3>Psicanálise Clínica</h3><p>Um espaço de escuta e investigação da história pessoal, dos afetos e dos conflitos. O processo pode ampliar a compreensão de si e contribuir para elaborar experiências e escolhas.</p></article><article class="card"><div class="number">06 / PARAPSICOLOGIA CLÍNICA</div><h3>Parapsicologia Clínica</h3><p>Uma abordagem de investigação de vivências e fenômenos subjetivos, acolhendo dúvidas e experiências pessoais com respeito. Tem como foco ampliar a compreensão, o equilíbrio e o bem-estar do indivíduo.</p></article><article class="card"><div class="number">07 / TERAPIA INTEGRATIVA</div><h3>Terapia Integrativa</h3><p>Integra recursos e perspectivas de cuidado conforme as necessidades de cada pessoa. Seu objetivo é promover uma visão mais ampla do bem-estar e apoiar processos de autoconhecimento e equilíbrio.</p></article><article class="card"><div class="number">08 / REGRESSÃO</div><h3>Regressão de Memórias e Vidas Passadas</h3><p>Uma vivência de exploração de memórias, imagens e narrativas pessoais, conduzida com acolhimento. Pode favorecer reflexões, a ressignificação de experiências e uma compreensão mais ampla de questões atuais, sem validar tais conteúdos como fatos históricos.</p></article><article class="card"><div class="number">09 / PALESTRAS</div><h3>Palestras em Terapia e Desenvolvimento Humano</h3><p>Encontros para grupos, empresas e eventos, voltados ao bem-estar, autoconhecimento e desenvolvimento humano. O objetivo é compartilhar reflexões e ferramentas práticas que inspirem novas perspectivas e atitudes no cotidiano.</p></article></div></div></section>
+    <section class="profile" id="cristiano"><div class="container profile-grid"><img class="profile-photo" src="cristiano-mendes.jpeg" alt="Cristiano Mendes, Terapeuta e Parapsicólogo"><div><div class="eyebrow">Quem vai acompanhar você</div><h2>Cristiano Mendes</h2><span class="role">Terapeuta e Parapsicólogo</span><p>Meu propósito é oferecer um espaço de acolhimento, escuta e desenvolvimento, respeitando a singularidade de cada pessoa e o seu momento de vida.</p><p>Por meio da hipnose clínica e do coaching, o processo é conduzido com atenção aos seus objetivos, para que você encontre caminhos mais conscientes e possíveis.</p><a class="button primary" href="https://wa.me/5541988471452?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">◉ Falar com Cristiano</a></div></div></section>
+    <section class="how" id="como-funciona"><div class="container"><div class="section-top"><div class="eyebrow">Simples e acolhedor</div><h2>Como começar seu processo</h2></div><div class="steps"><div class="step"><b>1</b><div><h3>Entre em contato</h3><p>Envie uma mensagem pelo WhatsApp e conte brevemente o que você procura.</p></div></div><div class="step"><b>2</b><div><h3>Escolha o formato</h3><p>Definimos a melhor opção: presencial em Curitiba ou atendimento online.</p></div></div><div class="step"><b>3</b><div><h3>Inicie sua jornada</h3><p>Agendamos seu horário para iniciar um processo pensado para o seu momento.</p></div></div></div></div></section>
+    <section class="location" id="atendimento"><div class="container location-grid"><div><div class="eyebrow" style="color:#aee5ff">Onde você estiver</div><h2>Presencial em Curitiba. Online para você.</h2><p>Tenha acesso a um cuidado profissional no formato que faz mais sentido para sua rotina.</p><div class="place" style="margin-top:24px"><strong>Atendimento presencial</strong><span>Avenida Prefeito Erasto Gaertner, 2169<br>Sala 208 — 2º andar<br>Esquina com a Rua Rodrigo de Freitas<br>Bacacheri — Curitiba, PR</span><hr style="border:0;border-top:1px solid rgba(255,255,255,.16);margin:18px 0"><strong>Atendimento online</strong><span>Sessões por videochamada para o Brasil e o exterior.</span></div><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida%20Prefeito%20Erasto%20Gaertner%2C%202169%2C%20Curitiba%2C%20PR" target="_blank" rel="noopener">Abrir rota no Google Maps ↗</a></div><div class="map"><iframe title="Mapa do consultório de Cristiano Mendes" src="https://www.google.com/maps?q=Avenida%20Prefeito%20Erasto%20Gaertner%2C%202169%2C%20Curitiba%2C%20PR&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
+  </main>
+  <footer><div class="container">Hipnose Clínica &amp; Coaching • Curitiba e Online</div></footer>
+  <a class="whatsapp" href="https://wa.me/5541988471452?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener">◉ Fale pelo WhatsApp</a>
+</body>
+</html>
