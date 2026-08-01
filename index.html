@@ -85,6 +85,46 @@
     footer { padding:27px 0; text-align:center; color:#668294; font-size:.88rem; }
     .whatsapp { position:fixed; right:22px; bottom:22px; z-index:20; display:flex; align-items:center; gap:10px; padding:13px 17px; color:#fff; background:#168b58; border-radius:999px; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(15,91,57,.3); }
     @media (max-width:760px) { nav { display:none; } .nav { min-height:62px; } .hero { padding:62px 0; } .hero-grid,.location-grid,.profile-grid { grid-template-columns:1fr; gap:32px; } .cards,.steps { grid-template-columns:1fr; } section { padding:62px 0; } .hero-card { padding:25px; } .profile-photo { max-width:310px; } .whatsapp { right:14px; bottom:14px; } }
+  /* AJUSTES PARA CELULAR */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .cards, .grid, .services-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  .btn, a[href*="wa.me"] {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+}
   </style>
 </head>
 <body>
